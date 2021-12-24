@@ -1,0 +1,17 @@
+{
+  "extends": ["next", "eslint:recommended", "prettier"],
+  "plugins": ["react", "prettier"],
+  "env": {
+    "node": true,
+    "browser": true,
+    "es2021": true
+  },
+  "rules": {
+    "no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^_"
+      }
+    ]
+  }
+}
