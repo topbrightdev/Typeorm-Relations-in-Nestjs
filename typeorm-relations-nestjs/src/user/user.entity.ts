@@ -25,6 +25,12 @@ export class User {
   village: string;
 
 
+  @Column()
+  contact: number;
+
+
+
+
 
 
 @AfterInsert()
