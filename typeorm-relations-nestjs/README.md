@@ -24,6 +24,19 @@
 
 ## Description
 
+## migration 
+
+```
+ Delete the dist , node_modules , migration file (if you have generated earier) 
+```
+
+  - do install the above dependencies
+  - start : npm run start:dev and stop
+  - generate migration : npm run typeorm migration:generate -- -n user-schema -o
+  - run migration : npm run typeorm migration:run
+  - start : npm run start:dev , done your db structure is changes
+
+
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
 ## Installation
