@@ -5,9 +5,11 @@ import {
     Entity,
     Column,
     PrimaryGeneratedColumn,
-    OneToOne
+    OneToOne,
+    OneToMany
   } from 'typeorm';
 import { contactInfoEntity } from './contactInfo.entity';
+import { taskInfoEntity } from './task.entity';
   
   
   
@@ -21,8 +23,10 @@ import { contactInfoEntity } from './contactInfo.entity';
 
     @OneToOne(()=>contactInfoEntity , contactInfo=>contactInfo.employee)
     contactInfo:contactInfoEntity
-  
 
+
+    @OneToMany(()=> taskInfoEntity , tasks=>tasks.employee)
+    tasks:taskInfoEntity
 
 
   @AfterInsert()
