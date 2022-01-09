@@ -22,9 +22,6 @@ export class User {
   password: string;
 
 
-
- 
-
 @AfterInsert()
   logInsert() {
     console.log(`User has been inserted with id ${this.id}`);
