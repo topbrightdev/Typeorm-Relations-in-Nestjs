@@ -11,7 +11,7 @@ import { User } from './user/user.entity'
     TypeOrmModule.forRoot({
       type:'sqlite',
       database:'rdb.sqlite',
-      entities:[User],
+      entities:['**/*.entity.js'],
       synchronize:true,
       logging:true
     }),
