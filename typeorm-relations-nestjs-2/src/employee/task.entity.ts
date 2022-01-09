@@ -19,7 +19,7 @@ import { Employees } from './employee.entity';
     name: string;
 
 
-    @ManyToOne(()=> Employees , employee=> employee.tasks)
+    @ManyToOne(()=> Employees , employee=> employee.tasks ,{ onDelete:'SET NULL'})
     employee:Employees
       
    
