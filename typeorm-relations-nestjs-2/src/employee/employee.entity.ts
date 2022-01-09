@@ -26,7 +26,7 @@ import { taskInfoEntity } from './task.entity';
 
 
     @OneToMany(()=> taskInfoEntity , tasks=>tasks.employee)
-    tasks:taskInfoEntity
+    tasks:taskInfoEntity[]
 
 
   @AfterInsert()
