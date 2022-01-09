@@ -21,6 +21,11 @@ export class User {
   @Column()
   password: string;
 
+  @Column()
+  village: string;
+
+
+
 
 @AfterInsert()
   logInsert() {
