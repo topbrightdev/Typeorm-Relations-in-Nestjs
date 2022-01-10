@@ -22,7 +22,15 @@ export class AppService {
     ) {}
 
 
+
+  
   getHello(): string {
     return 'Hello World!';
   }
+
+
+  // async create(emp:Partial<Employees>) {
+  //   const Emp = await this.employeeRepo.create(emp);
+  //   return this.employeeRepo.save(Emp);
+  // }
 }

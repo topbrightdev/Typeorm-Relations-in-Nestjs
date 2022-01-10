@@ -17,10 +17,12 @@ import { Employees } from '../employee/employee.entity';
     @Column()
     phone: string;
 
-
-      
+  
     @Column()
     email: string;
+
+    @Column()
+    employeeId: number;
 
 
     @OneToOne(() => Employees ,employee => employee.contactInfo ,{ onDelete: 'CASCADE'})
