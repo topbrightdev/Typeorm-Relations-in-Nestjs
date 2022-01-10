@@ -14,7 +14,7 @@ import { Employees } from '../employee/employee.entity';
     @PrimaryGeneratedColumn()
     id: number;
   
-    @Column()
+    @Column({nullable: true})
     phone: string;
 
   

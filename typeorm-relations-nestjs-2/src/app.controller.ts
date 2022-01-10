@@ -13,7 +13,9 @@ export class AppController {
   // }
 
   @Get()
-  getHello(): string {
-    return this.appService.getHello();
+ async getHello(): Promise<any> {
+
+   await this.appService.seed()
+    return 'Seed Completed';
   }
 }
