@@ -6,7 +6,7 @@ import {
     JoinColumn,
     ManyToOne
   } from 'typeorm';
-import { Employees } from './employee.entity';
+import { Employees } from '../employee/employee.entity';
   
   
   

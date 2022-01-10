@@ -8,8 +8,8 @@ import {
     OneToOne,
     OneToMany
   } from 'typeorm';
-import { contactInfoEntity } from './contactInfo.entity';
-import { taskInfoEntity } from './task.entity';
+import { contactInfoEntity } from '../contactInfo/contactInfo.entity';
+import { taskInfoEntity } from '../tasks/task.entity';
   
   
   
