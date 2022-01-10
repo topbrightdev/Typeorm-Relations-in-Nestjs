@@ -1,3 +1,4 @@
+import { meetingEntity } from 'src/meetings/meetings.entity';
 import {
     AfterInsert,
     AfterRemove,
@@ -6,7 +7,10 @@ import {
     Column,
     PrimaryGeneratedColumn,
     OneToOne,
-    OneToMany
+    OneToMany,
+    ManyToOne,
+    ManyToMany,
+    JoinTable
   } from 'typeorm';
 import { contactInfoEntity } from '../contactInfo/contactInfo.entity';
 import { taskInfoEntity } from '../tasks/task.entity';
@@ -21,12 +25,22 @@ import { taskInfoEntity } from '../tasks/task.entity';
     @Column()
     name: string;
 
-    @OneToOne(()=>contactInfoEntity , contactInfo=>contactInfo.employee)
+    @ManyToOne(()=>Employees , (employee)=> employee.directReports , { onDelete:'SET NULL' })
+    manager: Employees
+
+    @OneToMany(()=>Employees , employee=> employee.manager)
+    directReports:Employees[]
+
+    @OneToOne(()=>contactInfoEntity , (contactInfo)=>contactInfo.employee)
     contactInfo:contactInfoEntity
 
 
-    @OneToMany(()=> taskInfoEntity , tasks=>tasks.employee)
+    @OneToMany(()=> taskInfoEntity , (tasks)=>tasks.employee)
     tasks:taskInfoEntity[]
+
+    @ManyToMany(()=> meetingEntity , (meetings)=>meetings.attendies)
+    @JoinTable()
+    meetings : meetingEntity[]
 
 
   @AfterInsert()
