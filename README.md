@@ -1,6 +1,12 @@
+Tested on Kovan TestNet.
+
 Live demo: [sushi-migrator.vercel.app](https://sushi-migrator.vercel.app/)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+## TODO
+
+- use react window instead of react virtualized
 
 ## Getting Started
 
